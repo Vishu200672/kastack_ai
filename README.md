@@ -26,7 +26,7 @@ python -m src.validate_project
 
 ## How message classification works
 
-The final taxonomy is `payment`, `meeting`, `task`, `information`, and `other`.
+The final taxonomy is `payment`, `meeting`, `task`, `issue`, `information`, and `other`. The original dataset has no verified issue examples, so high-signal failure wording is handled by a narrow transparent issue rule guard until human-reviewed issue labels are available.
 
 Because the supplied dataset has no ground-truth labels, the project first creates an annotation sheet with a transparent keyword/phrase baseline. The classifier uses **TF-IDF** features (unigrams and bigrams) and **Logistic Regression**. Training uses a stratified 80/20 held-out split, reports accuracy, macro F1, and weighted F1, then refits on all available labels for the application.
 
@@ -39,6 +39,7 @@ Classification and extraction are deliberately separate. Regex-based determinist
 - `action` — e.g. reply, submit, review
 - `object` — e.g. client email
 - `deadline` — ISO dates such as `2026-09-04`
+- `event_type`, `event_date`, and `event_time` for meeting/event wording
 - amount, date, time, email, phone, and transaction reference patterns
 
 For example, “Please reply to the client email by 2026-09-04” produces action `reply`, object `client email`, and deadline `2026-09-04`.
@@ -51,6 +52,8 @@ Before a message is displayed, exported, or written to the annotation sheet, com
 - Card/account-like numeric strings
 - OTP, PIN, password, and passcode patterns
 - Transaction/reference ID patterns
+
+Structured sensitive-data records also include `risk_level` and a `recommended_action`. Card numbers and transaction IDs are high risk; email addresses and phone numbers are medium risk.
 
 The original dataset, annotations, and trained model are ignored by Git. Only the generated report with masked text is allowed under `outputs/`.
 

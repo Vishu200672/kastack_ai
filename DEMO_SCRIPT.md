@@ -10,4 +10,6 @@
 8. Open `MSG_0007` to show structured extraction: action `reply`, object `client email`, deadline `2026-09-04`.
 9. Download the masked demo report and state that it contains only masked messages and structured output.
 
+10. Open **Safe classification examples**. Demonstrate the synthetic **ISSUE** example, explain it is a transparent rule guard because the original dataset had no verified issue examples, and show the **OTHER — unclear information** example as an intentionally uncertain/missing-information case.
+
 Close with: “The classifier determines category, deterministic rules extract useful action fields, and privacy masking runs before display or export.”

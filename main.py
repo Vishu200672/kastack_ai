@@ -23,6 +23,7 @@ st.subheader("Supported message categories")
 st.markdown("""
 - **TASK** — action-oriented requests
 - **MEETING** — meetings, events, and scheduling
+- **ISSUE** — errors, failures, and operational problems
 - **INFORMATION** — informational and reminder messages
 - **PAYMENT** — payment and financial messages
 - **OTHER** — general or miscellaneous messages
@@ -73,8 +74,22 @@ coverage["Predicted Category"] = coverage["Predicted Category"].str.upper()
 st.dataframe(coverage, hide_index=True, use_container_width=True)
 
 st.subheader("Privacy & Sensitive Data")
-st.write("Sensitive-looking phone numbers, email addresses, card/account numbers, passwords, and transaction references are detected and masked before display or export.")
+st.write("Sensitive-looking phone numbers, email addresses, card/account numbers, passwords, and transaction references are detected and masked before display or export. Structured output also records risk level and a recommended safe action.")
 st.code("Original:  My card number is 1234567890123492.\nDisplayed: My card number is ***.", language=None)
+
+st.subheader("Safe classification examples")
+st.caption("Synthetic examples used only to demonstrate the sixth category and unclear-information handling; they are not part of the supplied dataset.")
+examples = {
+    "ISSUE — system failure": "The payment portal is not working and shows an error.",
+    "OTHER — unclear information": "Please look into this when possible.",
+}
+choice = st.selectbox("Select an example", list(examples))
+example_text = examples[choice]
+example_prediction = predict_messages([example_text])[0]
+example_fields = extract_fields(example_text)
+st.write(f"Category: **{str(example_prediction['category']).upper()}**")
+st.write("Extracted fields:", example_fields or "None")
+st.caption(example_prediction["reason"])
 
 st.subheader("Mandatory demonstration details")
 for _, row in demo.iterrows():
