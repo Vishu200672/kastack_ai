@@ -49,7 +49,6 @@ elif report_path.exists():
     # Public-cloud mode: only the pre-generated masked report is present.
     demo = pd.read_csv(report_path)
     demo["extracted_fields"] = demo["extracted_fields"].map(json.loads)
-    st.info("Hosted privacy-safe demonstration mode: it uses the generated masked report; the original dataset is not deployed.")
 else:
     st.error("No private dataset or masked demonstration report is available.")
     st.stop()
