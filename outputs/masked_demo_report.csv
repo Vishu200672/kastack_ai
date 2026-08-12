@@ -1,0 +1,16 @@
+message_id,masked_message,predicted_category,model_confidence,extracted_fields,reason
+MSG_0002,Can you review the privacy checklist before 2026-09-09?,task,0.8446489128801182,"{""deadline"": [""2026-09-09""], ""action"": [""review""], ""object"": [""privacy checklist""]}",Predicted by trained classifier.
+MSG_0007,For today: Please reply to the client email by 2026-09-04.,task,0.801535693679464,"{""deadline"": [""2026-09-04""], ""action"": [""reply""], ""object"": [""client email""]}",Predicted by trained classifier.
+MSG_0001,"For today: Calendar update: family dinner, 2026-09-19 at 10:00, the library.",meeting,0.7459377417960854,"{""deadline"": [""2026-09-19""], ""action"": [""update""], ""time"": [""10:00""]}",Predicted by trained classifier.
+MSG_0003,FYI: Reminder: mentor catch-up happens on 2026-09-16 at 11:00 in the city clinic.,information,0.49437381630577126,"{""deadline"": [""2026-09-16""], ""time"": [""11:00""]}",Predicted by trained classifier.
+MSG_0009,"For my profile, my emergency contact is my brother.",other,0.6267256257278881,{},Predicted by trained classifier.
+MSG_0016,Just checking—Remember that i drink coffee without sugar.,other,0.7035733118817188,{},Predicted by trained classifier.
+MSG_0004,One more thing: The training material is on the portal.,other,0.7039699586732368,{},Predicted by trained classifier.
+MSG_0006,Important: The laptop battery is fully charged.,other,0.6928949458018544,{},Predicted by trained classifier.
+MSG_0014,Can you help? Special festival discount on clothing. Use code SAVE17.,other,0.6953186244879261,{},Predicted by trained classifier.
+MSG_0015,Please note: Flash sale on laptops starts at 6 PM. Use code SAVE23.,other,0.6790042383446084,"{""time"": [""6 PM""]}",Predicted by trained classifier.
+MSG_0005,"Hi, My home address is 42 Lake View Road, Chennai-45.",other,0.6374100550046663,{},Predicted by trained classifier.
+MSG_0013,One more thing: My card number is ****92.,payment,0.9127345137109936,"{""phone"": [""****-""]}",Predicted by trained classifier.
+MSG_0012,FYI: I will send the login details separately.,task,0.44338386745934844,"{""action"": [""send""]}",Predicted by trained classifier.
+MSG_0024,Just checking—I might prefer evening meetings now.,other,0.6972221944535038,{},Predicted by trained classifier.
+MSG_0037,One more thing: The review could be Friday afternoon.,task,0.7255431099455186,"{""action"": [""review""], ""object"": [""could be Friday afternoon""], ""date"": [""Friday""]}",Predicted by trained classifier.

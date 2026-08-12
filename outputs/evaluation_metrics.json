@@ -1,0 +1,61 @@
+{
+  "evaluation_note": "Held-out results are valid only when labels have been human reviewed. Weak labels are useful for an end-to-end pipeline check, not a quality claim.",
+  "labeled_messages": 900,
+  "train_messages": 720,
+  "test_messages": 180,
+  "accuracy": 0.9722,
+  "macro_f1": 0.97,
+  "weighted_f1": 0.9712,
+  "class_distribution": {
+    "other": 368,
+    "task": 206,
+    "meeting": 160,
+    "information": 146,
+    "payment": 20
+  },
+  "classification_report": {
+    "information": {
+      "precision": 1.0,
+      "recall": 0.8275862068965517,
+      "f1-score": 0.9056603773584906,
+      "support": 29.0
+    },
+    "meeting": {
+      "precision": 0.9411764705882353,
+      "recall": 1.0,
+      "f1-score": 0.9696969696969697,
+      "support": 32.0
+    },
+    "other": {
+      "precision": 0.9736842105263158,
+      "recall": 1.0,
+      "f1-score": 0.9866666666666667,
+      "support": 74.0
+    },
+    "payment": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "task": {
+      "precision": 0.9761904761904762,
+      "recall": 1.0,
+      "f1-score": 0.9879518072289156,
+      "support": 41.0
+    },
+    "accuracy": 0.9722222222222222,
+    "macro avg": {
+      "precision": 0.9782102314610054,
+      "recall": 0.9655172413793103,
+      "f1-score": 0.9699951641902086,
+      "support": 180.0
+    },
+    "weighted avg": {
+      "precision": 0.9733004897865579,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.9711878411301007,
+      "support": 180.0
+    }
+  }
+}
