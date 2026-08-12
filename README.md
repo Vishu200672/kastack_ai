@@ -45,7 +45,7 @@ For example, “Please reply to the client email by 2026-09-04” produces actio
 
 ## Sensitive-information detection and masking
 
-Before a message is displayed, exported, or written to the annotation sheet, common sensitive-looking patterns are replaced with `****`:
+Before a message is displayed, exported, or written to the annotation sheet, common sensitive-looking patterns are replaced with `***`:
 
 - Email addresses and phone numbers
 - Card/account-like numeric strings

@@ -20,17 +20,13 @@ st.subheader("How it works")
 st.info("Message  →  Message Classification  →  Task / Event Extraction  →  Sensitive Information Detection  →  Masking  →  Structured Output")
 
 st.subheader("Supported message categories")
-category_info = pd.DataFrame({
-    "Category": ["TASK", "MEETING", "INFORMATION", "PAYMENT", "OTHER"],
-    "Meaning": [
-        "Action-oriented requests",
-        "Meetings, events, and scheduling",
-        "Informational and reminder messages",
-        "Payment and financial messages",
-        "General or miscellaneous messages",
-    ],
-})
-st.dataframe(category_info, hide_index=True, use_container_width=True)
+st.markdown("""
+- **TASK** — action-oriented requests
+- **MEETING** — meetings, events, and scheduling
+- **INFORMATION** — informational and reminder messages
+- **PAYMENT** — payment and financial messages
+- **OTHER** — general or miscellaneous messages
+""")
 
 data_path = Path("data/messages.csv")
 demo_path = Path("data/mandatory_demo_ids.csv")
@@ -78,11 +74,11 @@ st.dataframe(coverage, hide_index=True, use_container_width=True)
 
 st.subheader("Privacy & Sensitive Data")
 st.write("Sensitive-looking phone numbers, email addresses, card/account numbers, passwords, and transaction references are detected and masked before display or export.")
-st.code("Original:  My card number is 1234567890123492.\nDisplayed: My card number is ****.", language=None)
+st.code("Original:  My card number is 1234567890123492.\nDisplayed: My card number is ***.", language=None)
 
 st.subheader("Mandatory demonstration details")
 for _, row in demo.iterrows():
-    with st.expander(f"Message {row['message_id']} — {str(row['predicted_category']).upper()}"):
+    with st.expander(f"{row['message_id']}  •  {str(row['predicted_category']).upper()}"):
         st.write(row["message"] if "message" in row else row["masked_message"])
         if pd.notna(row["model_confidence"]):
             st.write(f"Model confidence: {row['model_confidence']:.1%}")

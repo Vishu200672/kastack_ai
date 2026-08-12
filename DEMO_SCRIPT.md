@@ -5,7 +5,7 @@
 3. Open `MSG_0002`. Show its category is **TASK** and point out any extracted action or deadline.
 4. Open `MSG_0001`. Show **MEETING** classification.
 5. Open `MSG_0003`. Show **INFORMATION** classification.
-6. Open `MSG_0013`. Show **PAYMENT** classification and confirm every sensitive-looking value appears as `****`.
+6. Open `MSG_0013`. Show **PAYMENT** classification and confirm every sensitive-looking value appears as `***`.
 7. Open `MSG_0012`. Show the task category and extracted action fields.
 8. Open `MSG_0007` to show structured extraction: action `reply`, object `client email`, deadline `2026-09-04`.
 9. Download the masked demo report and state that it contains only masked messages and structured output.

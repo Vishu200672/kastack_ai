@@ -10,7 +10,7 @@ MSG_0006,Important: The laptop battery is fully charged.,other,0.692894945801854
 MSG_0014,Can you help? Special festival discount on clothing. Use code SAVE17.,other,0.6953186244879261,{},Predicted by trained classifier.
 MSG_0015,Please note: Flash sale on laptops starts at 6 PM. Use code SAVE23.,other,0.6790042383446084,"{""time"": [""6 PM""]}",Predicted by trained classifier.
 MSG_0005,"Hi, My home address is 42 Lake View Road, Chennai-45.",other,0.6374100550046663,{},Predicted by trained classifier.
-MSG_0013,One more thing: My card number is ****92.,payment,0.9127345137109936,"{""phone"": [""****-""]}",Predicted by trained classifier.
+MSG_0013,One more thing: My card number is ***92.,payment,0.9127345137109936,"{""phone"": [""***-""]}",Predicted by trained classifier.
 MSG_0012,FYI: I will send the login details separately.,task,0.44338386745934844,"{""action"": [""send""]}",Predicted by trained classifier.
 MSG_0024,Just checking—I might prefer evening meetings now.,other,0.6972221944535038,{},Predicted by trained classifier.
 MSG_0037,One more thing: The review could be Friday afternoon.,task,0.7255431099455186,"{""action"": [""review""], ""object"": [""could be Friday afternoon""], ""date"": [""Friday""]}",Predicted by trained classifier.
