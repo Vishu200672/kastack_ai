@@ -7,7 +7,7 @@ A local, privacy-safe NLP pipeline for classifying 900 fictional messages, extra
 - Generated Git-safe structured output: `outputs/masked_demo_report.csv`
 - Evaluation metrics: `outputs/evaluation_metrics.json`
 - Video guide: `DEMO_SCRIPT.md`
-- Cloud demo: add the deployed URL here before submission: **TBD**
+- Streamlit demo: [KaStack Message Understanding · Streamlit](https://kastackaigit-fadhdpyss98smknhgn7iqo.streamlit.app/)
 - Loom video: add the recording URL here before submission: **TBD**
 
 ## Run locally
